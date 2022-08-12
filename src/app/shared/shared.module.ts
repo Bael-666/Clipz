@@ -29,7 +29,7 @@ import { AlertComponent } from './alert/alert.component';
     TabComponent,
     InputComponent,
     AlertComponent
-  ],
+  ]
   // providers: [
   //   ModalService
   // ]
