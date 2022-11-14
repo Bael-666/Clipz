@@ -40,7 +40,7 @@ export class AuthService {
 
   public async createUser(userData: IUser){
     if (!userData.password){
-      throw new Error("No se ha ingresado una contraseña.")
+      throw new Error("Password is required.")
     }
 
     const userCred = await this.auth.createUserWithEmailAndPassword(
@@ -48,7 +48,7 @@ export class AuthService {
     )
 
     if(!userCred.user){
-      throw new Error("No se ha encontrado el usuario.")
+      throw new Error("User not found.")
     }
 
     await this.usersCollection.doc(userCred.user.uid).set({
