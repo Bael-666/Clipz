@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   inSubmission = false;
   showAlert = false
-  alertMsg = 'Validando información de usuario.'
+  alertMsg = 'Validating user info.'
   alertColor = 'blue'
 
   constructor(private auth: AngularFireAuth) { }
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   async login(){
     this.showAlert = true
-    this.alertMsg = 'Validando información de usuario.'
+    this.alertMsg = 'Validating user info.'
     this.alertColor = 'blue'
     this.inSubmission = true
 
@@ -36,13 +36,13 @@ export class LoginComponent implements OnInit {
     }
     catch(e){
       console.log(e)
-      this.alertMsg = 'Ha ocurrido un error inesperado, por favor intenta más tarde.'
+      this.alertMsg = 'An error has ocurred, please try again later.'
       this.alertColor = 'red'
       this.inSubmission = false
       return
     }
 
-    this.alertMsg = 'Usuario autenticado correctamente.'
+    this.alertMsg = 'User authenticated successfully.'
     this.alertColor = 'green'
   }
 

@@ -54,12 +54,12 @@ export class RegisterComponent {
   }, [RegisterValidators.match('password', 'confirmPassword')])
 
   showAlert = false
-  alertMsg = 'Espera un momento, tu cuenta está siendo creada.'
+  alertMsg = 'Wait a moment, your account is being created.'
   alertColor = 'blue'
 
   async register(){
     this.showAlert = true
-    this.alertMsg = 'Espera un momento, tu cuenta está siendo creada.'
+    this.alertMsg = 'Wait a moment, your account is being created.'
     this.alertColor = 'blue'
     this.inSubmission = true
 
@@ -68,13 +68,13 @@ export class RegisterComponent {
     }
     catch(e){
       console.log(e)
-      this.alertMsg = 'Ha ocurrido un error inesperado, por favor intenta más tarde.'
+      this.alertMsg = 'An error has ocurred, please try again later.'
       this.alertColor = 'red'
       this.inSubmission = false
       return
     }
     
-    this.alertMsg = 'Tu cuenta ha sido creada correctamente.'
+    this.alertMsg = 'Your account has been created successfully.'
     this.alertColor = 'green'
   }
 }
